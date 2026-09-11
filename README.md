@@ -1,26 +1,19 @@
-# SIGAP Splash & Onboarding v2
+# SIGAP WebGIS Prototype
+Prototype tanpa data spasial riil.
 
-Versi ini dibuat sebagai halaman website sungguhan, bukan mockup presentasi.
+Halaman interaktif:
+1. Splash
+2. Onboarding
+3. Beranda
+4. Peta
+5. Detail Fasilitas
+6. Rute Navigasi
+7. Mode Darurat
 
-## Isi
-- Splash Screen full-screen
-- Onboarding 1: Semua Layanan Dalam Satu Peta
-- Onboarding 2: Akses Cepat Saat Darurat
-- Onboarding 3: Masyarakat Lebih Aman
-- Placeholder halaman setelah onboarding
-- Responsive desktop & mobile
-- Swipe pada perangkat sentuh
+Semua titik, jarak, alamat, dan fasilitas masih dummy/placeholder.
 
-## Menjalankan di VS Code
-1. Extract ZIP.
-2. Open Folder di VS Code.
-3. Buka `index.html`.
-4. Klik kanan -> Open with Live Server.
+## Jalankan
+Buka `index.html` dengan Live Server di VS Code.
 
-## File
-- `index.html`
-- `style.css`
-- `script.js`
-
-## Tahap berikutnya
-Halaman terakhir bisa diganti atau diarahkan ke `home.html` untuk Beranda SIGAP.
+## GitHub Pages
+Upload `index.html`, `style.css`, dan `script.js` ke root repository GitHub Pages.

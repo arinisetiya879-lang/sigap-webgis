@@ -1,185 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SIGAP — Splash & Onboarding</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIGAP Prototype</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="app">
-    <section class="screen active splash" data-screen="0">
-      <div class="decor decor-a"></div>
-      <div class="decor decor-b"></div>
+<div id="app">
+  <section class="page active" id="splash">
+    <div class="center">
+      <div class="logo">⌖</div><h1>SIGAP</h1>
+      <h3>Sistem Informasi Geospasial</h3>
+      <p>Tanggap Bersama, Masyarakat Lebih Aman</p>
+      <div class="city">▥　▥　<span>✚</span>　▥　▥</div>
+      <button onclick="go('onboard')">Mulai Sekarang →</button>
+    </div>
+  </section>
 
-      <div class="brand">
-        <div class="logo-mark" aria-label="Logo SIGAP">
-          <div class="shield">
-            <div class="shield-inner">
-              <div class="map-pin"></div>
-            </div>
-          </div>
-        </div>
-        <h1>SIGAP</h1>
-        <p class="subtitle">Sistem Informasi Geospasial</p>
-        <p class="tagline">Tanggap Bersama,<br>Masyarakat Lebih Aman</p>
-      </div>
+  <section class="page" id="onboard">
+    <div class="top"><b>SIGAP</b><a onclick="go('home')">Lewati</a></div>
+    <div class="heroIcon">🗺️</div>
+    <small>01 · PETA LAYANAN</small><h2>Semua Layanan<br>Dalam Satu Peta</h2>
+    <p>Temukan layanan keamanan, kebakaran, medis, dan tanggap darurat di sekitar Anda.</p>
+    <button onclick="go('home')">Masuk ke SIGAP →</button>
+  </section>
 
-      <div class="scene">
-        <div class="skyline">
-          <div class="building b1"></div>
-          <div class="building b2"></div>
-          <div class="building hospital"><span>+</span></div>
-          <div class="building b4"></div>
-        </div>
-        <div class="ground"></div>
-        <div class="vehicle police">POLISI</div>
-        <div class="vehicle fire">DAMKAR</div>
-      </div>
+  <section class="page" id="home">
+    <div class="header"><div><b>📍 SIGAP</b><small>Kota Semarang ▾</small></div><span>🔔</span></div>
+    <h3>Halo,<br><b>Ada yang bisa kami bantu?</b></h3>
+    <div class="search">⌕　Cari lokasi, alamat, atau layanan...</div>
+    <div class="grid">
+      <div onclick="go('map')">👮<b>Kepolisian</b><small>Polsek, Polres, Pos Polisi</small></div>
+      <div onclick="go('map')">🔥<b>Pemadam Kebakaran</b><small>Pos Damkar</small></div>
+      <div onclick="go('map')">✚<b>Rumah Sakit / IGD</b><small>Layanan medis</small></div>
+      <div onclick="go('emergency')">⚠️<b>Pos Tanggap</b><small>Layanan darurat</small></div>
+    </div>
+    <div class="emergency" onclick="go('emergency')"><b>MODE DARURAT</b><span>Butuh bantuan cepat?　→</span></div>
+    <h3>Fasilitas Terdekat</h3>
+    <div class="card"><b>Polsek Tembalang</b><span>1,2 km · Buka 24 jam</span><button onclick="go('detail')">Lihat Detail</button></div>
+    <div class="card"><b>Rumah Sakit Terdekat</b><span>2,1 km · IGD 24 jam</span><button onclick="go('detail')">Lihat Detail</button></div>
+    <nav><a onclick="go('home')">⌂<small>Beranda</small></a><a onclick="go('map')">⌖<small>Peta</small></a><a onclick="go('emergency')">☏<small>Darurat</small></a><a>ⓘ<small>Informasi</small></a></nav>
+  </section>
 
-      <div class="bottom-action">
-        <button class="btn-primary" data-next>
-          Mulai Sekarang <span>→</span>
-        </button>
-      </div>
-    </section>
+  <section class="page" id="map">
+    <div class="mapTop"><div class="search">⌕ Cari lokasi atau alamat...</div><button>☷</button></div>
+    <div class="chips"><span>👮 Kepolisian</span><span>🔥 Damkar</span><span>✚ Rumah Sakit</span></div>
+    <div class="fakeMap">
+      <i class="road r1"></i><i class="road r2"></i><i class="road r3"></i>
+      <b class="pin p1">👮</b><b class="pin p2">🔥</b><b class="pin p3">✚</b><b class="pin p4">⚠</b>
+      <div class="you">● Lokasi Anda</div>
+    </div>
+    <div class="mapSheet"><b>Fasilitas Terdekat</b><div onclick="go('detail')">👮 Polsek Tembalang <span>1,2 km →</span></div><div onclick="go('detail')">✚ Rumah Sakit <span>2,1 km →</span></div></div>
+    <nav><a onclick="go('home')">⌂<small>Beranda</small></a><a onclick="go('map')">⌖<small>Peta</small></a><a onclick="go('emergency')">☏<small>Darurat</small></a><a>ⓘ<small>Informasi</small></a></nav>
+  </section>
 
-    <section class="screen onboarding" data-screen="1">
-      <div class="topbar">
-        <div class="mini-brand">
-          <div class="shield mini"><div class="shield-inner"><div class="map-pin"></div></div></div>
-          <span>SIGAP</span>
-        </div>
-        <button class="text-btn" data-skip>Lewati</button>
-      </div>
+  <section class="page" id="detail">
+    <div class="back" onclick="go('map')">←　Detail Fasilitas</div>
+    <div class="facilityPhoto">👮</div><h2>Polsek Tembalang</h2><div class="status">● Buka 24 Jam</div>
+    <div class="info"><p>📍 Jl. Contoh Tembalang, Kota Semarang</p><p>☎ (024) 000000</p><p>◷ Layanan 24 jam</p><p>🛡 Keamanan dan pelayanan masyarakat</p></div>
+    <div class="actions"><button onclick="go('route')">⌖ Lihat Rute</button><button class="outline">☎ Hubungi</button></div>
+    <div class="miniMap">Peta lokasi fasilitas<br>📍</div>
+  </section>
 
-      <div class="content">
-        <div class="illustration services-illustration">
-          <div class="phone-map">
-            <div class="map-line l1"></div>
-            <div class="map-line l2"></div>
-            <div class="map-line l3"></div>
-            <div class="center-pin"></div>
-          </div>
+  <section class="page" id="route">
+    <div class="back" onclick="go('detail')">←　Rute Navigasi</div>
+    <div class="routeHead"><b>Lokasi Anda</b><span>↓</span><b>Polsek Tembalang</b></div>
+    <div class="transport"><span>🚗 6 mnt</span><span>🏍 4 mnt</span><span>🚶 18 mnt</span></div>
+    <div class="routeMap"><i></i><b class="start">●</b><b class="finish">📍</b></div>
+    <div class="routeInfo"><h2>1,2 km</h2><p>Estimasi perjalanan 4–6 menit</p><button>Mulai Navigasi →</button></div>
+  </section>
 
-          <div class="service-badge badge-blue">★</div>
-          <div class="service-badge badge-red">●</div>
-          <div class="service-badge badge-green">+</div>
-          <div class="service-badge badge-orange">!</div>
-        </div>
-
-        <div class="copy">
-          <span class="eyebrow">01 · PETA LAYANAN</span>
-          <h2>Semua Layanan<br>Dalam Satu Peta</h2>
-          <p>Temukan lokasi kepolisian, pemadam kebakaran, rumah sakit, pos tanggap darurat, dan layanan keamanan lainnya di sekitar Anda secara real-time.</p>
-        </div>
-      </div>
-
-      <div class="nav-row">
-        <div class="progress">
-          <i class="active"></i><i></i><i></i>
-        </div>
-        <button class="btn-round" data-next>→</button>
-      </div>
-    </section>
-
-    <section class="screen onboarding" data-screen="2">
-      <div class="topbar">
-        <button class="btn-back" data-back>←</button>
-        <button class="text-btn" data-skip>Lewati</button>
-      </div>
-
-      <div class="content">
-        <div class="illustration route-illustration">
-          <div class="city-bg">
-            <span class="tower t1"></span>
-            <span class="tower t2"></span>
-            <span class="tower t3"></span>
-            <span class="tower t4"></span>
-          </div>
-          <div class="paper-map">
-            <div class="road-line r1"></div>
-            <div class="road-line r2"></div>
-            <div class="route-path"></div>
-            <div class="point start"></div>
-            <div class="point finish"></div>
-            <div class="eta">3 menit</div>
-            <div class="route-card">
-              <span class="car">🚙</span>
-              <div><strong>Rute Tercepat</strong><small>Menuju lokasi</small></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="copy">
-          <span class="eyebrow">02 · NAVIGASI</span>
-          <h2>Akses Cepat<br>Saat Darurat</h2>
-          <p>Dapatkan rute tercepat menuju fasilitas terdekat dengan estimasi waktu tempuh yang jelas dan mudah dipahami.</p>
-        </div>
-      </div>
-
-      <div class="nav-row">
-        <div class="progress">
-          <i></i><i class="active"></i><i></i>
-        </div>
-        <button class="btn-round" data-next>→</button>
-      </div>
-    </section>
-
-    <section class="screen onboarding" data-screen="3">
-      <div class="topbar">
-        <button class="btn-back" data-back>←</button>
-        <span></span>
-      </div>
-
-      <div class="content">
-        <div class="illustration community-illustration">
-          <div class="halo"></div>
-          <div class="outline-shield"></div>
-          <div class="city-row"></div>
-          <div class="people">
-            <span class="person p1"></span>
-            <span class="person p2"></span>
-            <span class="person p3"></span>
-            <span class="person p4"></span>
-          </div>
-        </div>
-
-        <div class="copy">
-          <span class="eyebrow">03 · KESELAMATAN</span>
-          <h2>Bersama Wujudkan<br>Masyarakat Lebih Aman</h2>
-          <p>Dengan informasi yang akurat dan mudah diakses, SIGAP membantu masyarakat menjadi lebih siap dan tanggap terhadap situasi darurat.</p>
-        </div>
-      </div>
-
-      <div class="final-area">
-        <div class="progress final-progress">
-          <i></i><i></i><i class="active"></i>
-        </div>
-        <button class="btn-primary" data-finish>Masuk ke SIGAP <span>→</span></button>
-      </div>
-    </section>
-
-    <section class="screen welcome" data-screen="4">
-      <div class="welcome-card">
-        <div class="logo-mark">
-          <div class="shield">
-            <div class="shield-inner">
-              <div class="map-pin"></div>
-            </div>
-          </div>
-        </div>
-        <span class="eyebrow">PROTOTYPE</span>
-        <h2>Siap masuk ke Beranda SIGAP</h2>
-        <p>Halaman ini menjadi placeholder sebelum kita sambungkan ke halaman Beranda, Peta, Detail Fasilitas, Rute Navigasi, dan Mode Darurat.</p>
-        <button class="btn-primary" data-restart>Ulangi Onboarding</button>
-      </div>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <section class="page" id="emergency">
+    <div class="back" onclick="go('home')">←　Mode Darurat</div>
+    <div class="alertIcon">!</div><h2>Butuh Bantuan?</h2><p>Pilih jenis keadaan darurat agar SIGAP dapat menampilkan layanan yang relevan.</p>
+    <div class="emGrid"><div onclick="go('map')">👮<b>Keamanan</b></div><div onclick="go('map')">🔥<b>Kebakaran</b></div><div onclick="go('map')">✚<b>Medis</b></div><div onclick="go('map')">⚠️<b>Bencana</b></div></div>
+    <button class="call">☎ Panggilan Darurat 112</button>
+    <small class="note">Nomor dan data pada prototype ini hanya contoh tampilan.</small>
+  </section>
+</div>
+<script src="script.js"></script>
+</body></html>
