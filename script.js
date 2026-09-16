@@ -102,7 +102,10 @@ async function loadDamkar(){const note=document.getElementById('damkarNotice');t
 Promise.all([
   fetch('./fasilitas_semarang.geojson').then(r=>r.json()).then(j=>{features=j.features}),
   loadBoundary()
-]).then(()=>loadDamkar()).catch(()=>{list.innerHTML='<p>Data GeoJSON gagal dimuat. Jalankan melalui Live Server/GitHub Pages.</p>';loadDamkar()});
+}).then(()=>loadDamkar()).catch((error)=>{
+  console.error('SIGAP DATA ERROR:', error);
+  list.innerHTML='<p>Data gagal dimuat: '+error.message+'</p>';
+});
 
 let cityCoverageLayers=[];
 
