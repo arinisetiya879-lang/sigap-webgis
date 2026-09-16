@@ -1,19 +1,27 @@
-# SIGAP WebGIS Prototype
-Prototype tanpa data spasial riil.
+# SIGAP WebGIS Semarang v12 — Stable Dispatch
 
-Halaman interaktif:
-1. Splash
-2. Onboarding
-3. Beranda
-4. Peta
-5. Detail Fasilitas
-6. Rute Navigasi
-7. Mode Darurat
+Versi ini dibangun ulang langsung dari **v10.1**, yaitu versi stabil yang sudah berhasil untuk:
+- klik Simulasi Kecelakaan;
+- Gunakan Lokasi Saat Ini;
+- Pilih Titik di Peta;
+- klik peta sebagai lokasi korban;
+- menampilkan fasilitas medis dan kepolisian terdekat.
 
-Semua titik, jarak, alamat, dan fasilitas masih dummy/placeholder.
+Kode pemilihan lokasi v10.1 sengaja tidak diubah.
 
-## Jalankan
-Buka `index.html` dengan Live Server di VS Code.
+## Fitur baru
+Setelah titik korban berhasil aktif, panel menampilkan **Hitung Simulasi Respons**.
 
-## GitHub Pages
-Upload `index.html`, `style.css`, dan `script.js` ke root repository GitHub Pages.
+Saat ditekan ada loading, lalu sistem menghitung:
+1. Medis terdekat → korban.
+2. Polisi terdekat → korban.
+3. Korban → fasilitas medis terdekat.
+
+Output:
+- estimasi menit;
+- jarak jaringan jalan;
+- kartu hasil yang dapat diklik untuk menampilkan rute.
+
+Jika OSRM public server gagal, titik korban dan fitur dasar tetap aktif karena dispatch dibuat sebagai modul terpisah.
+
+> Catatan: estimasi ini adalah simulasi waktu perjalanan jaringan jalan, bukan waktu dispatch resmi petugas.

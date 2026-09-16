@@ -1,0 +1,864 @@
+{
+  "type": "FeatureCollection",
+  "name": "SIGAP_Fasilitas_Semarang_v2",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4492272,
+          -6.9996494
+        ]
+      },
+      "properties": {
+        "id": "POL001",
+        "nama": "Polsek Gayamsari",
+        "kategori": "Keamanan",
+        "jenis": "Polsek",
+        "alamat": "Jl. Slamet Riyadi, Gayamsari, Kota Semarang",
+        "kecamatan": "Gayamsari",
+        "telepon": "0246716191",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://infomudik.semarangkota.go.id/halaman/daftar/12",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4295836,
+          -6.9680887
+        ]
+      },
+      "properties": {
+        "id": "POL002",
+        "nama": "Polsek Semarang Utara",
+        "kategori": "Keamanan",
+        "jenis": "Polsek",
+        "alamat": "Jl. Letjen Suprapto 45, Purwodinatan, Kota Semarang",
+        "kecamatan": "Semarang Tengah",
+        "telepon": "0243545162",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://infomudik.semarangkota.go.id/halaman/daftar/12",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4240809,
+          -6.983204
+        ]
+      },
+      "properties": {
+        "id": "POL003",
+        "nama": "Polsek Semarang Tengah",
+        "kategori": "Keamanan",
+        "jenis": "Polsek",
+        "alamat": "Jl. Brumbungan II No.42, Brumbungan, Kota Semarang",
+        "kecamatan": "Semarang Tengah",
+        "telepon": "0243545175",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://infomudik.semarangkota.go.id/halaman/daftar/12",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.3885074,
+          -6.9824216
+        ]
+      },
+      "properties": {
+        "id": "POL004",
+        "nama": "Polsek Semarang Barat",
+        "kategori": "Keamanan",
+        "jenis": "Polsek",
+        "alamat": "Jl. Ronggolawe Selatan No.3, Kota Semarang",
+        "kecamatan": "Semarang Barat",
+        "telepon": "0247625680",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://infomudik.semarangkota.go.id/halaman/daftar/12",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4458639,
+          -7.0062317
+        ]
+      },
+      "properties": {
+        "id": "POL005",
+        "nama": "Polsek Semarang Selatan",
+        "kategori": "Keamanan",
+        "jenis": "Polsek",
+        "alamat": "Gg. XIV, Lamper Tengah, Kota Semarang",
+        "kecamatan": "Semarang Selatan",
+        "telepon": "0248454998",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://infomudik.semarangkota.go.id/halaman/daftar/12",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4349885,
+          -6.975818
+        ]
+      },
+      "properties": {
+        "id": "POL006",
+        "nama": "Polsek Semarang Timur",
+        "kategori": "Keamanan",
+        "jenis": "Polsek",
+        "alamat": "Jl. Brigjen Sudiarto/Majapahit No.442, Kota Semarang",
+        "kecamatan": "Semarang Timur",
+        "telepon": "0246719205",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://infomudik.semarangkota.go.id/halaman/daftar/12",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4060663,
+          -6.992227
+        ]
+      },
+      "properties": {
+        "id": "POL007",
+        "nama": "Polrestabes Semarang",
+        "kategori": "Keamanan",
+        "jenis": "Polrestabes",
+        "alamat": "Jl. Dr. Sutomo No.19, Barusari, Kota Semarang",
+        "kecamatan": "Semarang Selatan",
+        "telepon": "0248444444",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://infomudik.semarangkota.go.id/halaman/daftar/12",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4181609,
+          -7.0167915
+        ]
+      },
+      "properties": {
+        "id": "POL008",
+        "nama": "Polsek Gajahmungkur",
+        "kategori": "Keamanan",
+        "jenis": "Polsek",
+        "alamat": "Jl. Sultan Agung No.103, Gajahmungkur, Kota Semarang",
+        "kecamatan": "Gajahmungkur",
+        "telepon": "0248315123",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://infomudik.semarangkota.go.id/halaman/daftar/12",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4723355,
+          -7.0106499
+        ]
+      },
+      "properties": {
+        "id": "POL009",
+        "nama": "Polsek Pedurungan",
+        "kategori": "Keamanan",
+        "jenis": "Polsek",
+        "alamat": "Jl. Majapahit No.448, Pedurungan Tengah, Kota Semarang",
+        "kecamatan": "Pedurungan",
+        "telepon": "0246710863",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://infomudik.semarangkota.go.id/halaman/daftar/12",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.360356,
+          -6.9863551
+        ]
+      },
+      "properties": {
+        "id": "POL010",
+        "nama": "Polsek Tugu",
+        "kategori": "Keamanan",
+        "jenis": "Polsek",
+        "alamat": "Jl. Walisongo No.4, Jrakah, Kota Semarang",
+        "kecamatan": "Tugu",
+        "telepon": "0247611544",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://infomudik.semarangkota.go.id/halaman/daftar/12",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4278713,
+          -7.0167402
+        ]
+      },
+      "properties": {
+        "id": "POL011",
+        "nama": "Polsek Candisari",
+        "kategori": "Keamanan",
+        "jenis": "Polsek",
+        "alamat": "Jl. Dr. Wahidin No.45B, Kaliwiru, Kota Semarang",
+        "kecamatan": "Candisari",
+        "telepon": "",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://infomudik.semarangkota.go.id/halaman/daftar/12",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.3477774,
+          -6.9973922
+        ]
+      },
+      "properties": {
+        "id": "POL012",
+        "nama": "Polsek Ngaliyan",
+        "kategori": "Keamanan",
+        "jenis": "Polsek",
+        "alamat": "Jl. Prof. Dr. Hamka No.234, Tambakaji, Kota Semarang",
+        "kecamatan": "Ngaliyan",
+        "telepon": "0247617969",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://infomudik.semarangkota.go.id/halaman/daftar/12",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.370727,
+          -6.994586
+        ]
+      },
+      "properties": {
+        "id": "BNC001",
+        "nama": "SAR Daerah Jawa Tengah - SARDA JATENG",
+        "kategori": "Bencana",
+        "jenis": "SAR/Posko",
+        "alamat": "Jalan Sriwibowo Dalam VI Kav.115, Kembangarum, Kota Semarang",
+        "kecamatan": "Semarang Barat",
+        "telepon": "08122914271",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://www.infomudik.semarangkota.go.id/halaman/daftar/11",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4946451,
+          -7.0165256
+        ]
+      },
+      "properties": {
+        "id": "BNC002",
+        "nama": "BPBD Kota Semarang",
+        "kategori": "Bencana",
+        "jenis": "BPBD/Posko Siaga",
+        "alamat": "Kompleks Terminal Penggaron, Jl. Brigjen Sudiarto KM 11, Penggaron Kidul",
+        "kecamatan": "Pedurungan",
+        "telepon": "0246730212",
+        "sumber_instansi": "BPBD/Pemkot Semarang",
+        "source_url": "https://bpbd.semarangkota.go.id/Kontak",
+        "catatan_verifikasi": "Posko 24 jam; koordinat dari tautan peta Pemkot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4163273,
+          -6.9761441
+        ]
+      },
+      "properties": {
+        "id": "BNC003",
+        "nama": "Posko Penanggulangan Bencana",
+        "kategori": "Bencana",
+        "jenis": "Posko",
+        "alamat": "Jl. Tanjung No.11-A, Sekayu/Pandansari, Kota Semarang",
+        "kecamatan": "Semarang Tengah",
+        "telepon": "",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://www.infomudik.semarangkota.go.id/halaman/daftar/11",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4248076,
+          -7.0625233
+        ]
+      },
+      "properties": {
+        "id": "BNC004",
+        "nama": "Posko Tagana Semarang",
+        "kategori": "Bencana",
+        "jenis": "TAGANA/Posko",
+        "alamat": "Jl. Citandui Selatan, Bugangan, Kota Semarang",
+        "kecamatan": "Semarang Timur",
+        "telepon": "087832461444",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://www.infomudik.semarangkota.go.id/halaman/daftar/11",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4227651,
+          -6.9696814
+        ]
+      },
+      "properties": {
+        "id": "BNC005",
+        "nama": "BPBD Provinsi Jawa Tengah",
+        "kategori": "Bencana",
+        "jenis": "BPBD Provinsi",
+        "alamat": "Jl. Imam Bonjol 15, Dadapsari, Kota Semarang",
+        "kecamatan": "Semarang Utara",
+        "telepon": "",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://www.infomudik.semarangkota.go.id/halaman/daftar/11",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.3397213,
+          -7.000712
+        ]
+      },
+      "properties": {
+        "id": "BNC006",
+        "nama": "SAR Semarang",
+        "kategori": "Bencana",
+        "jenis": "SAR",
+        "alamat": "Perumahan Permata Puri, Jl. Bukit Barisan Blok AIV No.9, Bringin, Kota Semarang",
+        "kecamatan": "Ngaliyan",
+        "telepon": "",
+        "sumber_instansi": "Pemkot Semarang - Info Mudik",
+        "source_url": "https://www.infomudik.semarangkota.go.id/halaman/daftar/11",
+        "catatan_verifikasi": "Koordinat dari tautan peta resmi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4074897,
+          -6.9942118
+        ]
+      },
+      "properties": {
+        "id": "MED001",
+        "nama": "RSUP Dr. Kariadi",
+        "kategori": "Medis",
+        "jenis": "Rumah Sakit/IGD",
+        "alamat": "Jl. Dr. Sutomo No.16, Semarang",
+        "kecamatan": "Semarang Selatan",
+        "telepon": "1500202",
+        "sumber_instansi": "RSUP Dr. Kariadi",
+        "source_url": "https://rs-kariadi.go.id/utama/contact",
+        "catatan_verifikasi": "Koordinat dari tautan peta pada situs resmi RS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4565,
+          -7.0505
+        ]
+      },
+      "properties": {
+        "id": "MED002",
+        "nama": "RSD K.R.M.T. Wongsonegoro",
+        "kategori": "Medis",
+        "jenis": "Rumah Sakit/IGD",
+        "alamat": "Jl. Fatmawati No.1, Mangunharjo, Kota Semarang",
+        "kecamatan": "Tembalang",
+        "telepon": "0246711500",
+        "sumber_instansi": "RSD K.R.M.T. Wongsonegoro",
+        "source_url": "https://rsudsemarangkota.com/kontak.html",
+        "catatan_verifikasi": "Koordinat dicantumkan pada halaman kontak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.412674,
+          -6.98543
+        ]
+      },
+      "properties": {
+        "id": "MED003",
+        "nama": "RS Hermina Pandanaran",
+        "kategori": "Medis",
+        "jenis": "Rumah Sakit",
+        "alamat": "Jl. Pandanaran No.24, Semarang",
+        "kecamatan": "",
+        "telepon": "0248442525",
+        "sumber_instansi": "Kementerian Kesehatan RI",
+        "source_url": "https://sehatnegeriku.kemkes.go.id/wp-content/uploads/2018/06/BUKU-INFORMASI-MUDIK-TAHUN-2018-FINAL.pdf",
+        "catatan_verifikasi": "Koordinat dari buku informasi mudik Kemenkes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.443861,
+          -7.047658
+        ]
+      },
+      "properties": {
+        "id": "MED004",
+        "nama": "RS Nasional Diponegoro",
+        "kategori": "Medis",
+        "jenis": "Rumah Sakit/IGD",
+        "alamat": "Tembalang/Banyumanik, Kota Semarang",
+        "kecamatan": "Tembalang",
+        "telepon": "02476928020",
+        "sumber_instansi": "Kementerian Kesehatan RI",
+        "source_url": "https://sehatnegeriku.kemkes.go.id/wp-content/uploads/2018/06/BUKU-INFORMASI-MUDIK-TAHUN-2018-FINAL.pdf",
+        "catatan_verifikasi": "Koordinat dari buku informasi mudik Kemenkes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.411639,
+          -7.072452
+        ]
+      },
+      "properties": {
+        "id": "MED005",
+        "nama": "RS Hermina Banyumanik",
+        "kategori": "Medis",
+        "jenis": "Rumah Sakit",
+        "alamat": "Jl. Jend. Pol. Anton Soedjarwo No.195A, Semarang",
+        "kecamatan": "Banyumanik",
+        "telepon": "02476488989",
+        "sumber_instansi": "Kementerian Kesehatan RI",
+        "source_url": "https://sehatnegeriku.kemkes.go.id/wp-content/uploads/2018/06/BUKU-INFORMASI-MUDIK-TAHUN-2018-FINAL.pdf",
+        "catatan_verifikasi": "Koordinat dari buku informasi mudik Kemenkes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.409739,
+          -7.016271
+        ]
+      },
+      "properties": {
+        "id": "MED006",
+        "nama": "RSU Bhayangkara Akpol",
+        "kategori": "Medis",
+        "jenis": "Rumah Sakit",
+        "alamat": "Jl. Sultan Agung/Candi Baru No.131, Semarang",
+        "kecamatan": "Gajahmungkur",
+        "telepon": "0248502766",
+        "sumber_instansi": "Kementerian Kesehatan RI",
+        "source_url": "https://sehatnegeriku.kemkes.go.id/wp-content/uploads/2018/06/BUKU-INFORMASI-MUDIK-TAHUN-2018-FINAL.pdf",
+        "catatan_verifikasi": "Koordinat dari buku informasi mudik Kemenkes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.498072,
+          -7.023274
+        ]
+      },
+      "properties": {
+        "id": "MED007",
+        "nama": "RSIA Plamongan Indah",
+        "kategori": "Medis",
+        "jenis": "Rumah Sakit Ibu & Anak",
+        "alamat": "Jl. Kelapa Gading Raya No.52, Plamongan, Semarang",
+        "kecamatan": "Pedurungan",
+        "telepon": "0246711771",
+        "sumber_instansi": "Kementerian Kesehatan RI",
+        "source_url": "https://sehatnegeriku.kemkes.go.id/wp-content/uploads/2018/06/BUKU-INFORMASI-MUDIK-TAHUN-2018-FINAL.pdf",
+        "catatan_verifikasi": "Koordinat dari buku informasi mudik Kemenkes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.433315,
+          -6.994199
+        ]
+      },
+      "properties": {
+        "id": "MED008",
+        "nama": "RSIA Bunda",
+        "kategori": "Medis",
+        "jenis": "Rumah Sakit Ibu & Anak",
+        "alamat": "Jl. Brigjend Katamso No.8, Semarang",
+        "kecamatan": "",
+        "telepon": "0248413060",
+        "sumber_instansi": "Kementerian Kesehatan RI",
+        "source_url": "https://sehatnegeriku.kemkes.go.id/wp-content/uploads/2018/06/BUKU-INFORMASI-MUDIK-TAHUN-2018-FINAL.pdf",
+        "catatan_verifikasi": "Koordinat dari buku informasi mudik Kemenkes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.41459,
+          -6.987658
+        ]
+      },
+      "properties": {
+        "id": "PUS001",
+        "nama": "Puskesmas Pandanaran",
+        "kategori": "Medis",
+        "jenis": "Puskesmas/IGD",
+        "alamat": "Jl. Pandanaran No.79, Mugassari, Kec. Semarang Selatan, Kota Semarang",
+        "kecamatan": "Semarang Selatan",
+        "telepon": "0248311470",
+        "sumber_instansi": "PPID Kota Semarang + Kementerian Kesehatan RI",
+        "source_url": "https://ppid.semarangkota.go.id/kb/daftar-puskesmas-di-kota-semarang/",
+        "catatan_verifikasi": "Koordinat Kemenkes; tercantum sebagai Puskesmas IGD 24 jam pada informasi Nataru 2026"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.414101,
+          -7.058858
+        ]
+      },
+      "properties": {
+        "id": "PUS002",
+        "nama": "Puskesmas Srondol",
+        "kategori": "Medis",
+        "jenis": "Puskesmas Rawat Inap",
+        "alamat": "Jl. Setiabudi No.209, Srondol Kulon, Kec. Banyumanik, Kota Semarang",
+        "kecamatan": "Banyumanik",
+        "telepon": "0247472852",
+        "sumber_instansi": "PPID Kota Semarang + Kementerian Kesehatan RI",
+        "source_url": "https://ppid.semarangkota.go.id/kb/daftar-puskesmas-di-kota-semarang/",
+        "catatan_verifikasi": "Koordinat Kemenkes; tercantum rawat inap 24 jam pada informasi Nataru 2026"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.417931,
+          -7.046345
+        ]
+      },
+      "properties": {
+        "id": "PUS003",
+        "nama": "Puskesmas Ngesrep",
+        "kategori": "Medis",
+        "jenis": "Puskesmas Rawat Inap",
+        "alamat": "Jl. Teuku Umar No.271, Ngesrep, Kec. Banyumanik, Kota Semarang",
+        "kecamatan": "Banyumanik",
+        "telepon": "0247474113",
+        "sumber_instansi": "PPID Kota Semarang + Kementerian Kesehatan RI",
+        "source_url": "https://ppid.semarangkota.go.id/kb/daftar-puskesmas-di-kota-semarang/",
+        "catatan_verifikasi": "Koordinat Kemenkes; tercantum rawat inap 24 jam pada informasi Nataru 2026"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.421707,
+          -7.07064
+        ]
+      },
+      "properties": {
+        "id": "PUS004",
+        "nama": "Puskesmas Padangsari",
+        "kategori": "Medis",
+        "jenis": "Puskesmas",
+        "alamat": "Jl. Meranti Raya 389, Padangsari, Kec. Banyumanik, Kota Semarang",
+        "kecamatan": "Banyumanik",
+        "telepon": "0247472460",
+        "sumber_instansi": "Dinas Kesehatan Provinsi Jawa Tengah",
+        "source_url": "https://dinkesjatengprov.go.id/v2018/dokumen/alamat_Pus_RS_15/Buku_Alamat_RS_dan_Pusk_Jateng_2014.pdf",
+        "catatan_verifikasi": "Koordinat dari Buku Alamat RS dan Puskesmas Jawa Tengah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.409729,
+          -7.096868
+        ]
+      },
+      "properties": {
+        "id": "PUS005",
+        "nama": "Puskesmas Pudakpayung",
+        "kategori": "Medis",
+        "jenis": "Puskesmas",
+        "alamat": "Jl. Perintis Kemerdekaan, Kec. Banyumanik, Kota Semarang",
+        "kecamatan": "Banyumanik",
+        "telepon": "0247462711",
+        "sumber_instansi": "Dinas Kesehatan Provinsi Jawa Tengah",
+        "source_url": "https://dinkesjatengprov.go.id/v2018/dokumen/alamat_Pus_RS_15/Buku_Alamat_RS_dan_Pusk_Jateng_2014.pdf",
+        "catatan_verifikasi": "Koordinat dari Buku Alamat RS dan Puskesmas Jawa Tengah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.404846,
+          -7.011309
+        ]
+      },
+      "properties": {
+        "id": "PUS006",
+        "nama": "Puskesmas Pegandan",
+        "kategori": "Medis",
+        "jenis": "Puskesmas",
+        "alamat": "Jl. Kendeng Barat III/2, Kec. Gajahmungkur, Kota Semarang",
+        "kecamatan": "Gajahmungkur",
+        "telepon": "0248445809",
+        "sumber_instansi": "Dinas Kesehatan Provinsi Jawa Tengah",
+        "source_url": "https://dinkesjatengprov.go.id/v2018/dokumen/alamat_Pus_RS_15/Buku_Alamat_RS_dan_Pusk_Jateng_2014.pdf",
+        "catatan_verifikasi": "Koordinat dari Buku Alamat RS dan Puskesmas Jawa Tengah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.431793,
+          -7.013354
+        ]
+      },
+      "properties": {
+        "id": "PUS007",
+        "nama": "Puskesmas Candilama",
+        "kategori": "Medis",
+        "jenis": "Puskesmas/IGD",
+        "alamat": "Jl. Dr. Wahidin No.22, Jomblang, Kec. Candisari, Kota Semarang",
+        "kecamatan": "Candisari",
+        "telepon": "0248310515",
+        "sumber_instansi": "PPID Kota Semarang + Dinas Kesehatan Provinsi Jawa Tengah",
+        "source_url": "https://ppid.semarangkota.go.id/kb/daftar-puskesmas-di-kota-semarang/",
+        "catatan_verifikasi": "Koordinat Dinkes Jateng; tercantum Puskesmas IGD 24 jam pada informasi Nataru 2026"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.417229,
+          -7.008579
+        ]
+      },
+      "properties": {
+        "id": "PUS008",
+        "nama": "Puskesmas Kagok",
+        "kategori": "Medis",
+        "jenis": "Puskesmas",
+        "alamat": "Jl. Telomoyo 3, Kec. Candisari, Kota Semarang",
+        "kecamatan": "Candisari",
+        "telepon": "0248312573",
+        "sumber_instansi": "Dinas Kesehatan Provinsi Jawa Tengah",
+        "source_url": "https://dinkesjatengprov.go.id/v2018/dokumen/alamat_Pus_RS_15/Buku_Alamat_RS_dan_Pusk_Jateng_2014.pdf",
+        "catatan_verifikasi": "Koordinat dari Buku Alamat RS dan Puskesmas Jawa Tengah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.457413,
+          -7.024612
+        ]
+      },
+      "properties": {
+        "id": "PUS009",
+        "nama": "Puskesmas Kedungmundu",
+        "kategori": "Medis",
+        "jenis": "Puskesmas",
+        "alamat": "Jl. Sambiroto 1, Kec. Tembalang, Kota Semarang",
+        "kecamatan": "Tembalang",
+        "telepon": "0246717053",
+        "sumber_instansi": "PPID Kota Semarang + Dinas Kesehatan Provinsi Jawa Tengah",
+        "source_url": "https://ppid.semarangkota.go.id/kb/daftar-puskesmas-di-kota-semarang/",
+        "catatan_verifikasi": "Koordinat dari Buku Alamat RS dan Puskesmas Jawa Tengah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.481003,
+          -7.060615
+        ]
+      },
+      "properties": {
+        "id": "PUS010",
+        "nama": "Puskesmas Rowosari",
+        "kategori": "Medis",
+        "jenis": "Puskesmas",
+        "alamat": "Rowosari, Kec. Tembalang, Kota Semarang",
+        "kecamatan": "Tembalang",
+        "telepon": "02476414169",
+        "sumber_instansi": "PPID Kota Semarang + Dinas Kesehatan Provinsi Jawa Tengah",
+        "source_url": "https://ppid.semarangkota.go.id/kb/daftar-puskesmas-di-kota-semarang/",
+        "catatan_verifikasi": "Koordinat dari Buku Alamat RS dan Puskesmas Jawa Tengah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.457489,
+          -6.98076
+        ]
+      },
+      "properties": {
+        "id": "PUS011",
+        "nama": "Puskesmas Tlogosari Kulon",
+        "kategori": "Medis",
+        "jenis": "Puskesmas Rawat Inap",
+        "alamat": "Jl. Taman Satrio Manah 2, Tlogosari Kulon, Kec. Pedurungan, Kota Semarang",
+        "kecamatan": "Pedurungan",
+        "telepon": "0246717051",
+        "sumber_instansi": "PPID Kota Semarang + Dinas Kesehatan Provinsi Jawa Tengah",
+        "source_url": "https://ppid.semarangkota.go.id/kb/daftar-puskesmas-di-kota-semarang/",
+        "catatan_verifikasi": "Koordinat Dinkes Jateng; tercantum rawat inap 24 jam pada informasi Nataru 2026"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.459137,
+          -6.980483
+        ]
+      },
+      "properties": {
+        "id": "PUS012",
+        "nama": "Puskesmas Tlogosari Wetan",
+        "kategori": "Medis",
+        "jenis": "Puskesmas",
+        "alamat": "Tlogosari Wetan, Kec. Pedurungan, Kota Semarang",
+        "kecamatan": "Pedurungan",
+        "telepon": "0248713083",
+        "sumber_instansi": "PPID Kota Semarang + Dinas Kesehatan Provinsi Jawa Tengah",
+        "source_url": "https://ppid.semarangkota.go.id/kb/daftar-puskesmas-di-kota-semarang/",
+        "catatan_verifikasi": "Koordinat dari Buku Alamat RS dan Puskesmas Jawa Tengah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.469978,
+          -6.966564
+        ]
+      },
+      "properties": {
+        "id": "PUS013",
+        "nama": "Puskesmas Genuk",
+        "kategori": "Medis",
+        "jenis": "Puskesmas",
+        "alamat": "Jl. Genuksari, Kec. Genuk, Kota Semarang",
+        "kecamatan": "Genuk",
+        "telepon": "0246584188",
+        "sumber_instansi": "PPID Kota Semarang + Dinas Kesehatan Provinsi Jawa Tengah",
+        "source_url": "https://ppid.semarangkota.go.id/kb/daftar-puskesmas-di-kota-semarang/",
+        "catatan_verifikasi": "Koordinat dari Buku Alamat RS dan Puskesmas Jawa Tengah"
+      }
+    }
+  ]
+}
