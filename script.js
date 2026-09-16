@@ -100,7 +100,7 @@ async function geocodeDamkar(d){const cacheKey='sigap_geocode_'+d.id;try{const c
 async function loadDamkar(){const note=document.getElementById('damkarNotice');try{const r=await fetch('data/damkar_semarang.json');const arr=await r.json();let ok=0,failed=0;for(const d of arr){let lat=d.lat,lng=d.lng;if(lat==null||lng==null){try{const g=await geocodeDamkar(d);lat=g.lat;lng=g.lng;await sleep(1100)}catch(e){failed++;continue}}features.push(toFeature(d,lat,lng));ok++;}renderMarkers();note.textContent=`🔥 ${ok} pos sektor Damkar aktif di peta${failed?`; ${failed} lokasi belum berhasil digeocode`:''}.`;note.classList.add('success')}catch(e){note.textContent='🔥 Data Damkar belum dapat dimuat; kategori lain tetap dapat digunakan.'}}
 
 Promise.all([
-  fetch('data/fasilitas_semarang.geojson').then(r=>r.json()).then(j=>{features=j.features}),
+  fetch('./fasilitas_semarang.geojson').then(r=>r.json()).then(j=>{features=j.features}),
   loadBoundary()
 ]).then(()=>loadDamkar()).catch(()=>{list.innerHTML='<p>Data GeoJSON gagal dimuat. Jalankan melalui Live Server/GitHub Pages.</p>';loadDamkar()});
 
