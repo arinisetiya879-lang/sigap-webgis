@@ -1,27 +1,29 @@
-# SIGAP WebGIS Semarang v12 — Stable Dispatch
+# SIGAP WebGIS v13.6.4 — GitHub Pages Ready
 
-Versi ini dibangun ulang langsung dari **v10.1**, yaitu versi stabil yang sudah berhasil untuk:
-- klik Simulasi Kecelakaan;
-- Gunakan Lokasi Saat Ini;
-- Pilih Titik di Peta;
-- klik peta sebagai lokasi korban;
-- menampilkan fasilitas medis dan kepolisian terdekat.
+Versi ini disiapkan untuk GitHub Pages.
 
-Kode pemilihan lokasi v10.1 sengaja tidak diubah.
+Struktur folder yang harus di-upload ke ROOT repository:
 
-## Fitur baru
-Setelah titik korban berhasil aktif, panel menampilkan **Hitung Simulasi Respons**.
+index.html
+style.css
+script.js
+.nojekyll
+assets/
+  sigap-semarang-rescue-bg.png
+data/
+  fasilitas_semarang.geojson
+  damkar_semarang.json
 
-Saat ditekan ada loading, lalu sistem menghitung:
-1. Medis terdekat → korban.
-2. Polisi terdekat → korban.
-3. Korban → fasilitas medis terdekat.
+Perbaikan GitHub Pages:
+- Path CSS dan JavaScript menggunakan path relatif.
+- Asset gambar menggunakan path relatif.
+- Data GeoJSON dan Damkar menggunakan `document.baseURI`, sehingga tetap bekerja ketika repository berada pada subpath GitHub Pages.
+- Tidak menggunakan path absolut `/data/...`.
+- Ditambahkan `.nojekyll`.
+- Ditambahkan cache-busting untuk style.css dan script.js.
 
-Output:
-- estimasi menit;
-- jarak jaringan jalan;
-- kartu hasil yang dapat diklik untuk menampilkan rute.
+Contoh:
+Jika repository bernama `sigap-webgis`, halaman dapat berjalan dari:
+https://USERNAME.github.io/sigap-webgis/
 
-Jika OSRM public server gagal, titik korban dan fitur dasar tetap aktif karena dispatch dibuat sebagai modul terpisah.
-
-> Catatan: estimasi ini adalah simulasi waktu perjalanan jaringan jalan, bukan waktu dispatch resmi petugas.
+Jangan upload folder `SIGAP_WebGIS_v13_6_4_GitHub_Pages` sebagai satu folder di dalam repository. Upload ISI folder ini ke root repository.

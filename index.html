@@ -4,24 +4,43 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f6f1e8">
-<title>SIGAP Semarang v12 - Stable Dispatch</title>
+<title>SIGAP Semarang v13.5 - Animated Intro FIX</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css?v=1364">
 </head>
 <body>
 <!-- Splash + onboarding, benar-benar berada di dalam WebGIS -->
 <div id="welcomeFlow" class="welcome-flow">
-  <section id="splashScreen" class="splash-screen">
-    <div class="splash-orbit orbit-a"></div><div class="splash-orbit orbit-b"></div>
-    <div class="splash-logo"><span>⌖</span></div>
-    <div class="splash-kicker">WEBGIS LAYANAN DARURAT KOTA SEMARANG</div>
-    <h1>SIGAP</h1>
-    <p>Tanggap Bersama, Masyarakat Lebih Aman.</p>
-    <button id="enterOnboarding" class="primary-cta">Mulai Jelajah <span>→</span></button>
-    <small>Peta untuk masyarakat, respons untuk keselamatan.</small>
-  </section>
+<button id="audioToggle" class="intro-audio-toggle" type="button" title="Suara introduction" aria-label="Aktifkan atau matikan suara">🔇</button>
+<section id="splashScreen" class="splash-screen sigap-hero-splash">
+      <div class="hero-image-wrap" aria-hidden="true">
+        <img src="./assets/sigap-semarang-rescue-bg.png" class="hero-semarang-image" alt="">
+        <div class="hero-image-shade"></div>
+      </div>
+
+      <div class="hero-topbar">
+        <div class="hero-brand">
+          <div class="hero-brand-mark">S</div>
+          <div><strong>SIGAP</strong><span>WebGIS Aksesibilitas Layanan Darurat<br>Kota Semarang</span></div>
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <div class="hero-kicker">BERSAMA MEMBANGUN KOTA YANG TANGGUH</div>
+        <h1>Semarang<br><em>Siap, Selamat, Bersama</em></h1>
+        <p>SIGAP membantu Anda menemukan layanan darurat dengan lebih cepat, tepat, dan mudah di Kota Semarang.</p>
+        <button id="enterOnboarding" class="primary-cta hero-next">Mulai Jelajah <span>→</span></button>
+      </div>
+
+      <div class="hero-audio"></div>
+    </section>
 
   <section id="onboardingScreen" class="onboarding-screen hidden">
+      <div class="onboarding-shared-bg" aria-hidden="true">
+        <img src="./assets/sigap-semarang-rescue-bg.png" alt="">
+        <div class="onboarding-bg-overlay"></div>
+      </div>
+
     <button id="skipOnboarding" class="skip-btn">Lewati intro</button>
     <div class="onboard-shell onboard-shell-v2">
       <div class="onboard-brand"><span class="brand-mini">⌖</span><div><b>SIGAP</b><small>Tur singkat fitur WebGIS</small></div></div>
@@ -106,6 +125,7 @@
     <button class="filter" data-cat="Keamanan"><span class="filter-icon security">◆</span><span><b>Keamanan</b><small>Kepolisian</small></span></button>
     <button class="filter" data-cat="Bencana"><span class="filter-icon disaster">▲</span><span><b>Bencana</b><small>BPBD & SAR</small></span></button>
     <button class="filter" data-cat="Kebakaran"><span class="filter-icon fire">●</span><span><b>Kebakaran</b><small>Pos Damkar</small></span></button>
+    
   </div>
 
   <div class="section-label"><span>Analisis & Visualisasi</span><i></i></div>
@@ -169,6 +189,15 @@
         <div class="service-copy"><small>KEAMANAN TERDEKAT</small><b id="nearestPoliceName">Mencari...</b><span id="nearestPoliceDistance">-</span></div>
         <button id="routeNearestPolice">Rute →</button>
       </div>
+      <div class="capacity-sim-box">
+        <div><small>STATUS KAPASITAS RS</small><b id="medicalCapacityStatus">🟢 Tersedia</b><span>Status simulasi — bukan data real-time</span></div>
+        <button id="toggleMedicalFull">Simulasikan RS Penuh</button>
+      </div>
+      <div id="alternativeMedicalCard" class="incident-service-card medical hidden">
+        <div class="service-badge">↪</div>
+        <div class="service-copy"><small>RS ALTERNATIF</small><b id="alternativeMedicalName">Mencari...</b><span id="alternativeMedicalDistance">-</span></div>
+        <button id="routeAlternativeMedical">Rute →</button>
+      </div>
     </div>
     <div class="dispatch-module">
       <div class="dispatch-module-head">
@@ -213,6 +242,11 @@
     <button id="closeRoute" class="close">×</button><small class="route-kicker">RUTE KE FASILITAS</small><h3 id="routeTitle">-</h3>
     <div class="metrics"><span><b id="routeDistance">-</b><small>Jarak jaringan jalan</small></span><span><b id="routeTime">-</b><small>Estimasi</small></span></div>
     <div class="transport-box"><div class="transport-label">Moda perjalanan</div><div class="transport-options"><button id="modeCar" class="transport-btn active" onclick="setTransportMode('car')">🚗 Mobil</button><button id="modeMotor" class="transport-btn" onclick="setTransportMode('motorcycle')">🏍️ Motor</button></div><small id="transportNote">Mobil: rute mengikuti profil driving OSRM.</small></div>
+    <div class="live-nav-box">
+      <div><small>NAVIGASI LANGSUNG</small><b id="liveNavStatus">Belum aktif</b><span id="liveNavAccuracy">GPS akan diperbarui selama perjalanan.</span></div>
+      <button id="startLiveNav" class="live-nav-start">▶ Mulai Navigasi</button>
+      <button id="stopLiveNav" class="live-nav-stop hidden">■ Hentikan</button>
+    </div>
     <button id="serviceAreaBtn" class="secondary">Analisis Service Area 5–10–15 menit</button><button id="clearRoute" class="dark-btn">Hapus Rute</button><p id="isoStatus" class="status"></p>
   </div>
 
@@ -248,5 +282,5 @@
 <div id="aboutModal" class="simple-modal hidden"><div class="simple-modal-card"><button class="modal-close" data-close="aboutModal">×</button><span class="eyebrow">TENTANG SIGAP</span><h2>Sistem Informasi Geospasial Aksesibilitas Layanan Darurat</h2><p>SIGAP membantu pengguna melihat fasilitas darurat Kota Semarang, menemukan fasilitas terdekat, menghitung rute mobil atau motor, serta menganalisis jangkauan layanan berdasarkan waktu tempuh jaringan jalan.</p><div class="about-grid"><div><b>4</b><span>Kategori layanan</span></div><div><b>5–15</b><span>Menit service area</span></div><div><b>WebGIS</b><span>Analisis spasial</span></div></div></div></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="script.js"></script>
+<script src="./script.js?v=1364"></script>
 </body></html>
