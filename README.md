@@ -1,9 +1,10 @@
-# SIGAP WebGIS v13.6.6 — Incident Close FIX
+# SIGAP WebGIS v13.6.7 — GitHub FINAL
+
+Versi GitHub Pages dengan struktur file root sesuai repository saat ini.
 
 Perbaikan:
-- Tombol × pada panel Simulasi Insiden sekarang menjalankan fungsi `endAccidentSimulation()`.
-- Tombol `Akhiri Simulasi` menjalankan fungsi yang sama.
-- Saat ditutup, marker korban, route, service area, dispatch result, badge insiden, dan state simulasi dibersihkan.
-- Posisi pengguna sebelumnya dikembalikan jika tersedia.
-- Tombol diberi z-index/pointer-events agar dapat diklik.
-- Fitur lain dari v13.6.5 tetap dipertahankan.
+- Background splash dan onboarding memakai `sigap-semarang-rescue-bg.png` dari root.
+- Data fasilitas dan Damkar dibaca dari root repository.
+- Tombol Rute pada Medis Terdekat dan Keamanan Terdekat aktif.
+- Musik intro browser-generated dipicu setelah klik Mulai Jelajah.
+- Simulasi respons, live navigation, service area, dan incident close tetap dipertahankan.
