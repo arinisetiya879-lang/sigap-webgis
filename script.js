@@ -1,11 +1,3 @@
-
-// ===== GitHub Pages path helper =====
-// Semua file lokal dipanggil relatif terhadap index.html agar tetap bekerja
-// pada localhost maupun https://username.github.io/nama-repo/
-function assetURL(path){
-  return new URL(String(path).replace(/^\.?\//,''), document.baseURI).href;
-}
-
 const map=L.map('map',{zoomControl:true}).setView([-7.005,110.425],12);
 const baseLayers={
   light:L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}),
@@ -182,10 +174,10 @@ async function geocodeDamkar(d){const cacheKey='sigap_geocode_'+d.id;try{const c
   const u='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&q='+encodeURIComponent(q);
   const r=await fetch(u,{headers:{'Accept-Language':'id'}});if(!r.ok)throw Error();const j=await r.json();if(!j.length)throw Error();const out={lat:Number(j[0].lat),lng:Number(j[0].lon)};localStorage.setItem(cacheKey,JSON.stringify(out));return out;
 }
-async function loadDamkar(){const note=document.getElementById('damkarNotice');try{const r=await fetch(assetURL('data/damkar_semarang.json'));const arr=await r.json();let ok=0,failed=0;for(const d of arr){let lat=d.lat,lng=d.lng;if(lat==null||lng==null){try{const g=await geocodeDamkar(d);lat=g.lat;lng=g.lng;await sleep(1100)}catch(e){failed++;continue}}features.push(toFeature(d,lat,lng));ok++;}renderMarkers();note.textContent=`🔥 ${ok} pos Damkar aktif di peta${failed?`; ${failed} titik belum memiliki koordinat`:''}.`;note.classList.add('success')}catch(e){note.textContent='🔥 Data Damkar belum dapat dimuat; kategori lain tetap dapat digunakan.'}}
+async function loadDamkar(){const note=document.getElementById('damkarNotice');try{const r=await fetch('data/damkar_semarang.json');const arr=await r.json();let ok=0,failed=0;for(const d of arr){let lat=d.lat,lng=d.lng;if(lat==null||lng==null){try{const g=await geocodeDamkar(d);lat=g.lat;lng=g.lng;await sleep(1100)}catch(e){failed++;continue}}features.push(toFeature(d,lat,lng));ok++;}renderMarkers();note.textContent=`🔥 ${ok} pos Damkar aktif di peta${failed?`; ${failed} titik belum memiliki koordinat`:''}.`;note.classList.add('success')}catch(e){note.textContent='🔥 Data Damkar belum dapat dimuat; kategori lain tetap dapat digunakan.'}}
 
 Promise.all([
-  fetch(assetURL('data/fasilitas_semarang.geojson')).then(r=>r.json()).then(j=>{features=j.features}),
+  fetch('data/fasilitas_semarang.geojson').then(r=>r.json()).then(j=>{features=j.features}),
   loadBoundary()
 ]).then(()=>loadDamkar()).catch(()=>{list.innerHTML='<p>Data GeoJSON gagal dimuat. Jalankan melalui Live Server/GitHub Pages.</p>';loadDamkar()});
 
@@ -318,12 +310,9 @@ document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',(
 
 // ===== v9 SIMULASI KECELAKAAN =====
 let accidentMarker=null, accidentPickMode=false, nearestMedicalFeature=null, nearestPoliceFeature=null, previousUserLatLng=null;
-let medicalFullSimulation=false, alternativeMedicalFeature=null;
 let dispatchLayer=null, dispatchLabel=null, dispatchRoutes={medical:null,police:null,evacuation:null};
 function victimIcon(){return L.divIcon({className:'',html:'<div class="victim-marker-wrap"><span class="victim-marker-ring"></span><span class="victim-marker-core">!</span></div>',iconSize:[46,46],iconAnchor:[23,23]});}
 function nearestByCategory(lat,lng,category){const candidates=features.filter(f=>f.properties?.kategori===category);if(!candidates.length)return null;return candidates.map(f=>{const [flng,flat]=f.geometry.coordinates;return{f,d:hav({lat,lng},{lat:flat,lng:flng})}}).sort((a,b)=>a.d-b.d)[0];}
-function nextNearestMedical(lat,lng,excludeId){const candidates=features.filter(f=>f.properties?.kategori==='Medis'&&f.properties?.id!==excludeId);if(!candidates.length)return null;return candidates.map(f=>{const [flng,flat]=f.geometry.coordinates;return{f,d:hav({lat,lng},{lat:flat,lng:flng})}}).sort((a,b)=>a.d-b.d)[0];}
-function updateCapacitySimulation(){const status=document.getElementById('medicalCapacityStatus');const btn=document.getElementById('toggleMedicalFull');const card=document.getElementById('alternativeMedicalCard');if(status)status.textContent=medicalFullSimulation?'🔴 Penuh (Simulasi)':'🟢 Tersedia';if(btn)btn.textContent=medicalFullSimulation?'Batalkan Status Penuh':'Simulasikan RS Penuh';if(medicalFullSimulation&&nearestMedicalFeature&&userLatLng){alternativeMedicalFeature=nextNearestMedical(userLatLng.lat,userLatLng.lng,nearestMedicalFeature.f.properties.id);if(alternativeMedicalFeature){document.getElementById('alternativeMedicalName').textContent=alternativeMedicalFeature.f.properties.nama;document.getElementById('alternativeMedicalDistance').textContent=`± ${alternativeMedicalFeature.d.toFixed(1)} km garis lurus`;card?.classList.remove('hidden')}}else{alternativeMedicalFeature=null;card?.classList.add('hidden')}}
 
 async function fetchDispatchRoute(start,end){
   const url=`https://router.project-osrm.org/route/v1/driving/${start.lng},${start.lat};${end.lng},${end.lat}?overview=full&geometries=geojson`;
@@ -438,9 +427,6 @@ function setAccidentPoint(lat,lng){
   renderNearest();
   nearestMedicalFeature=nearestByCategory(lat,lng,'Medis');
   nearestPoliceFeature=nearestByCategory(lat,lng,'Keamanan');
-  medicalFullSimulation=false;
-  alternativeMedicalFeature=null;
-  updateCapacitySimulation();
   document.getElementById('victimCoords').textContent=`${lat.toFixed(6)}, ${lng.toFixed(6)}`;
   if(nearestMedicalFeature){
     document.getElementById('nearestMedicalName').textContent=nearestMedicalFeature.f.properties.nama;
@@ -455,15 +441,18 @@ function setAccidentPoint(lat,lng){
   document.getElementById('incidentBadgeText').textContent='Titik korban aktif · klik Rute untuk respons';
   document.getElementById('accidentModal').classList.add('hidden');
 }
-function endAccidentSimulation(){if(liveNavActive)stopLiveNavigation();resetDispatchPanel();if(accidentMarker){map.removeLayer(accidentMarker);accidentMarker=null;}accidentPickMode=false;document.body.classList.remove('map-pick-cursor');document.getElementById('incidentPanel').classList.add('hidden');document.getElementById('incidentModeBadge').classList.add('hidden');if(routeLayer){map.removeLayer(routeLayer);routeLayer=null}if(isoLayer){map.removeLayer(isoLayer);isoLayer=null}document.getElementById('routeCard').classList.add('hidden');selected=null;nearestMedicalFeature=null;nearestPoliceFeature=null;alternativeMedicalFeature=null;medicalFullSimulation=false;if(previousUserLatLng){setUser(previousUserLatLng.lat,previousUserLatLng.lng,'Lokasi Anda')}else{userLatLng=null;renderNearest()}previousUserLatLng=null;}
+function endAccidentSimulation(){if(liveNavActive)stopLiveNavigation();resetDispatchPanel();if(accidentMarker){map.removeLayer(accidentMarker);accidentMarker=null;}accidentPickMode=false;document.body.classList.remove('map-pick-cursor');document.getElementById('incidentPanel').classList.add('hidden');document.getElementById('incidentModeBadge').classList.add('hidden');if(routeLayer){map.removeLayer(routeLayer);routeLayer=null}if(isoLayer){map.removeLayer(isoLayer);isoLayer=null}document.getElementById('routeCard').classList.add('hidden');selected=null;nearestMedicalFeature=null;nearestPoliceFeature=null;if(previousUserLatLng){setUser(previousUserLatLng.lat,previousUserLatLng.lng,'Lokasi Anda')}else{userLatLng=null;renderNearest()}previousUserLatLng=null;}
+// v13.6.6 — incident panel close/end controls
+// Both X and "Akhiri Simulasi" execute the same complete cleanup.
+document.getElementById('closeIncidentPanel')?.addEventListener('click', endAccidentSimulation);
+document.getElementById('endAccidentSimulation')?.addEventListener('click', endAccidentSimulation);
+
 document.getElementById('accidentBtn')?.addEventListener('click',()=>document.getElementById('accidentModal').classList.remove('hidden'));
 document.getElementById('closeAccidentModal')?.addEventListener('click',()=>document.getElementById('accidentModal').classList.add('hidden'));
 document.getElementById('useVictimCurrentLocation')?.addEventListener('click',()=>{if(navigator.geolocation){navigator.geolocation.getCurrentPosition(p=>setAccidentPoint(p.coords.latitude,p.coords.longitude),()=>{alert('Lokasi browser tidak tersedia. Silakan pilih titik korban langsung pada peta.');document.getElementById('accidentModal').classList.add('hidden');accidentPickMode=true;document.body.classList.add('map-pick-cursor');document.getElementById('incidentModeBadge').classList.remove('hidden');document.getElementById('incidentBadgeText').textContent='Klik peta untuk menentukan lokasi korban';},{enableHighAccuracy:true,timeout:8000});}});
 document.getElementById('pickVictimOnMap')?.addEventListener('click',()=>{document.getElementById('accidentModal').classList.add('hidden');accidentPickMode=true;document.body.classList.add('map-pick-cursor');document.getElementById('incidentModeBadge').classList.remove('hidden');document.getElementById('incidentBadgeText').textContent='Klik peta untuk menentukan lokasi korban';});
 map.on('click',e=>{if(accidentPickMode)setAccidentPoint(e.latlng.lat,e.latlng.lng)});
 
-document.getElementById('toggleMedicalFull')?.addEventListener('click',()=>{medicalFullSimulation=!medicalFullSimulation;updateCapacitySimulation();});
-document.getElementById('routeAlternativeMedical')?.addEventListener('click',()=>{if(alternativeMedicalFeature)routeTo(alternativeMedicalFeature.f.properties.id);});
 
 
 

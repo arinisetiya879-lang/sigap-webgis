@@ -1,29 +1,9 @@
-# SIGAP WebGIS v13.6.4 — GitHub Pages Ready
+# SIGAP WebGIS v13.6.6 — Incident Close FIX
 
-Versi ini disiapkan untuk GitHub Pages.
-
-Struktur folder yang harus di-upload ke ROOT repository:
-
-index.html
-style.css
-script.js
-.nojekyll
-assets/
-  sigap-semarang-rescue-bg.png
-data/
-  fasilitas_semarang.geojson
-  damkar_semarang.json
-
-Perbaikan GitHub Pages:
-- Path CSS dan JavaScript menggunakan path relatif.
-- Asset gambar menggunakan path relatif.
-- Data GeoJSON dan Damkar menggunakan `document.baseURI`, sehingga tetap bekerja ketika repository berada pada subpath GitHub Pages.
-- Tidak menggunakan path absolut `/data/...`.
-- Ditambahkan `.nojekyll`.
-- Ditambahkan cache-busting untuk style.css dan script.js.
-
-Contoh:
-Jika repository bernama `sigap-webgis`, halaman dapat berjalan dari:
-https://USERNAME.github.io/sigap-webgis/
-
-Jangan upload folder `SIGAP_WebGIS_v13_6_4_GitHub_Pages` sebagai satu folder di dalam repository. Upload ISI folder ini ke root repository.
+Perbaikan:
+- Tombol × pada panel Simulasi Insiden sekarang menjalankan fungsi `endAccidentSimulation()`.
+- Tombol `Akhiri Simulasi` menjalankan fungsi yang sama.
+- Saat ditutup, marker korban, route, service area, dispatch result, badge insiden, dan state simulasi dibersihkan.
+- Posisi pengguna sebelumnya dikembalikan jika tersedia.
+- Tombol diberi z-index/pointer-events agar dapat diklik.
+- Fitur lain dari v13.6.5 tetap dipertahankan.

@@ -343,3 +343,20 @@
   opacity:1!important;
   visibility:visible!important;
 }
+
+/* ===== v13.6.6 incident close controls ===== */
+#incidentPanel{position:fixed}
+#closeIncidentPanel{
+  position:absolute!important;
+  top:12px!important;
+  right:12px!important;
+  z-index:50!important;
+  pointer-events:auto!important;
+  cursor:pointer!important;
+}
+#endAccidentSimulation{
+  pointer-events:auto!important;
+  cursor:pointer!important;
+  position:relative;
+  z-index:5;
+}

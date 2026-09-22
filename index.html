@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#f6f1e8">
 <title>SIGAP Semarang v13.5 - Animated Intro FIX</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="./style.css?v=1364">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!-- Splash + onboarding, benar-benar berada di dalam WebGIS -->
@@ -14,7 +14,7 @@
 <button id="audioToggle" class="intro-audio-toggle" type="button" title="Suara introduction" aria-label="Aktifkan atau matikan suara">🔇</button>
 <section id="splashScreen" class="splash-screen sigap-hero-splash">
       <div class="hero-image-wrap" aria-hidden="true">
-        <img src="./assets/sigap-semarang-rescue-bg.png" class="hero-semarang-image" alt="">
+        <img src="assets/sigap-semarang-rescue-bg.png" class="hero-semarang-image" alt="">
         <div class="hero-image-shade"></div>
       </div>
 
@@ -37,7 +37,7 @@
 
   <section id="onboardingScreen" class="onboarding-screen hidden">
       <div class="onboarding-shared-bg" aria-hidden="true">
-        <img src="./assets/sigap-semarang-rescue-bg.png" alt="">
+        <img src="assets/sigap-semarang-rescue-bg.png" alt="">
         <div class="onboarding-bg-overlay"></div>
       </div>
 
@@ -189,15 +189,6 @@
         <div class="service-copy"><small>KEAMANAN TERDEKAT</small><b id="nearestPoliceName">Mencari...</b><span id="nearestPoliceDistance">-</span></div>
         <button id="routeNearestPolice">Rute →</button>
       </div>
-      <div class="capacity-sim-box">
-        <div><small>STATUS KAPASITAS RS</small><b id="medicalCapacityStatus">🟢 Tersedia</b><span>Status simulasi — bukan data real-time</span></div>
-        <button id="toggleMedicalFull">Simulasikan RS Penuh</button>
-      </div>
-      <div id="alternativeMedicalCard" class="incident-service-card medical hidden">
-        <div class="service-badge">↪</div>
-        <div class="service-copy"><small>RS ALTERNATIF</small><b id="alternativeMedicalName">Mencari...</b><span id="alternativeMedicalDistance">-</span></div>
-        <button id="routeAlternativeMedical">Rute →</button>
-      </div>
     </div>
     <div class="dispatch-module">
       <div class="dispatch-module-head">
@@ -282,5 +273,5 @@
 <div id="aboutModal" class="simple-modal hidden"><div class="simple-modal-card"><button class="modal-close" data-close="aboutModal">×</button><span class="eyebrow">TENTANG SIGAP</span><h2>Sistem Informasi Geospasial Aksesibilitas Layanan Darurat</h2><p>SIGAP membantu pengguna melihat fasilitas darurat Kota Semarang, menemukan fasilitas terdekat, menghitung rute mobil atau motor, serta menganalisis jangkauan layanan berdasarkan waktu tempuh jaringan jalan.</p><div class="about-grid"><div><b>4</b><span>Kategori layanan</span></div><div><b>5–15</b><span>Menit service area</span></div><div><b>WebGIS</b><span>Analisis spasial</span></div></div></div></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="./script.js?v=1364"></script>
+<script src="script.js"></script>
 </body></html>
